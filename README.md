@@ -95,24 +95,33 @@ This helped **improve model accuracy by ~5%** by removing noise.
 
 ## 🚀 Quick Start / How to Run
 
-### 1. Installation
-Ensure dependencies are installed in your virtual environment:
+### Option A: One-Command Startup (Recommended)
+Simply run the included startup script from the project folder:
 ```bash
-pip install -r requirements.txt
+./run.sh
 ```
+*(This automatically activates the environment, ensures the model is trained, and opens the dashboard on `http://localhost:8501`)*
 
-### 2. Run Machine Learning Pipeline (CLI)
-Train and benchmark all models (Random Forest, XGBoost, LightGBM, CatBoost), serialize the best model to `models/best_model.pkl`, and output `reports/model_performance.md`:
-```bash
-python main.py
-```
+---
 
-### 3. Run Interactive Web Dashboard
-Launch the real-time Crash Severity Predictor, EDA Intelligence dashboard, and Policy Intervention Simulator:
-```bash
-streamlit run app.py
-```
-Then open `http://localhost:8501` in your browser.
+### Option B: Manual Commands
+
+1. **Activate Environment & Install Dependencies**:
+   ```bash
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+2. **Run Machine Learning Pipeline (CLI)**:
+   ```bash
+   python main.py
+   ```
+
+3. **Launch Interactive Web Dashboard**:
+   ```bash
+   streamlit run app.py
+   ```
+   Then open `http://localhost:8501` in your browser.
 
 ---
 
