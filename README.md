@@ -93,27 +93,53 @@ This helped **improve model accuracy by ~5%** by removing noise.
 
 
 
+## 🚀 Quick Start / How to Run
+
+### 1. Installation
+Ensure dependencies are installed in your virtual environment:
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run Machine Learning Pipeline (CLI)
+Train and benchmark all models (Random Forest, XGBoost, LightGBM, CatBoost), serialize the best model to `models/best_model.pkl`, and output `reports/model_performance.md`:
+```bash
+python main.py
+```
+
+### 3. Run Interactive Web Dashboard
+Launch the real-time Crash Severity Predictor, EDA Intelligence dashboard, and Policy Intervention Simulator:
+```bash
+streamlit run app.py
+```
+Then open `http://localhost:8501` in your browser.
+
+---
+
 ## 📁 Folder Structure
 
 | Folder/File                   | Description                                                        |
 |------------------------------|--------------------------------------------------------------------|
 | `README.md`                  | Main documentation file for the project                            |
-| `DataQuest_Megalith.ipynb`   | Jupyter notebook with EDA, feature engineering, and ML modeling    |
+| `app.py`                     | Interactive Streamlit web application & risk simulator             |
+| `main.py`                    | End-to-end training, benchmarking, and evaluation pipeline script  |
+| `requirements.txt`           | Project dependencies                                               |
+| `DataQuest.ipynb`            | Jupyter notebook with EDA, feature engineering, and ML modeling    |
 | `data/`                      | Folder containing dataset files                                    |
 | └── `Data_Sheet.csv`         | Cleaned version of the dataset                                     |
-| `presentation/`              | Folder for final hackathon presentation                            |
-| └── `Resource.pptx`          | PowerPoint presentation with slides and visual insights            |
-| `reports/`                   | (Optional) Folder for storing evaluation metrics or summaries      |
-| └── `model_performance.md`   | Markdown file summarizing model performance                        |
-| `models/`                    | (Optional) Folder for saving trained model artifacts               |
-| └── `best_model.pkl`         | Serialized ML model (if saved)                                     |
-| `utils/`                     | (Optional) Helper scripts or reusable functions                    |
-| └── `helper_functions.py`    | Python script for utilities used in the notebook                   |
+| `reports/`                   | Folder storing evaluation metrics and summaries                    |
+| └── `model_performance.md`   | Markdown file summarizing model performance benchmarks             |
+| `models/`                    | Folder containing saved trained model artifacts                    |
+| └── `best_model.pkl`         | Serialized Random Forest model & preprocessing bundle              |
+| `utils/`                     | Reusable utility functions                                         |
+| ├── `__init__.py`            | Python package init                                                |
+| └── `helper_functions.py`    | Data processing, model tuning, evaluation, and inference utilities |
 
-
+---
 
 For queries or collaborations: [adarshrai1903@gmail.com]
 
 ---
 
 > 🚧 *"Together, we can save lives and build safer roads for everyone."*
+
